@@ -1,0 +1,72 @@
+/* Container styling */
+.list-container {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Table styling */
+  .list-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Header and row styling */
+  .list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-bottom: 1px solid #cacaca;
+    font-size: 14px;
+  }
+  
+  .list-table-format.title {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    border-bottom: 2px solid #cacaca;
+  }
+  
+  .list-table-format.item {
+    background-color: #ffffff;
+  }
+  
+  .list-table-format img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* Button styling */
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* No data message */
+  .no-data {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .list-table-format {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    .list-table-format.title {
+      display: none;
+    }
+  }
+  
