@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './List.css';
 
-const List = ({url}) => {
+const List = ({url}) =>{ 
 
   const [foodList, setFoodList] = useState([]); // State for storing food items
 
@@ -31,13 +31,14 @@ const List = ({url}) => {
         toast.success("Item deleted successfully");
         fetchList(); // Refresh list after deletion
       } else {
-        toast.error("Failed to delete item");
+        toast.error(response.data.message || "Failed to delete item");
       }
     } catch (error) {
       toast.error("Error deleting item");
-      console.error("Error deleting food item:", error);
+      console.error("Error deleting food item:", error.response?.data || error.message);
     }
   };
+  
 
   // Initial fetch on component mount
   useEffect(() => {

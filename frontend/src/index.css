@@ -1,19 +1,22 @@
-*{
+/* *{
 
   padding :0;
   margine:0;
   box-sizing: border-box;
-}
+} */
 
-body{
+body {
   min-height: 100vh;
+  background: linear-gradient(to bottom, #FFFAE5, #FFB347);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
 }
 a{
   text-decoration: none;
   color: inherit;
 }
 .app{
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 

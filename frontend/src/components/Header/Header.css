@@ -1,41 +1,55 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
-    position: relative;
-
-}
-
-.header-contents{
-    position: absolute;
+    background: url('https://hungerbay.com/assets/images/b6.jpg') no-repeat center;
+    background-size: cover; /* Fill the entire container */
     display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 1.5vw;
-  max-width: 50%;
-  bottom:10% ;
-  left:6vw;
-  animation: fadeIn 3s;
-
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    border-radius: 50px;
 }
-.header-contents h2{
+
+.header-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Align text in center */
+    gap: 1.5vw;
+    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    animation: fadeIn 3s;
+   
+    border-radius: 50px;
+    
+}
+
+.header-contents h2 {
     font-weight: 500;
-    color: white;
-    font-size:max(4.5vw,22px) ;
+    color: rgb(252, 243, 237);
+    font-size: max(4.5vw, 22px);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow */
+}
 
-}
-.header-contents p{
-    color: white;
+.header-contents p {
+    color: rgb(223, 161, 19);
     font-size: 1vw;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+     /* Add shadow */
 }
-.header-contents button{
+
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
-    font-size: max(1vw , 13px);
+    font-size: max(1vw, 13px);
     border-radius: 50px;
-
+    cursor: pointer;
+    margin-bottom: 50px;
 }

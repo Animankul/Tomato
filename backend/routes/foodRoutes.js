@@ -17,6 +17,9 @@ const upload = multer({ storage });
 // Define API routes
 foodRouter.post("/add", upload.single("image"), addFood);
 foodRouter.get("/list", listFood);
-foodRouter.post("/remove", removeFood);
+// foodRouter.post("/remove", removeFood);
+foodRouter.delete("/remove/:id", removeFood);
+
+
 
 export default foodRouter;

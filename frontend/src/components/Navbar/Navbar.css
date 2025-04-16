@@ -1,120 +1,155 @@
 /* Navbar styles */
 .navbar {
-    padding: 20px 0px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(255, 245, 230, 0.8); /* Soft cream with transparency */
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .navbar .logo {
     width: 150px;
+    color: #FF6F61; /* Tomato Red */
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
-    color: #49557e;
+    color: #3C3C3C;
     font-size: 18px;
 }
 
 .navbar-right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
+    margin-right: 10px;
 }
 
 .navbar button {
-    background: transparent;
+    background-color: #FF6F61; /* Tomato Red */
     font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
+    color: white;
+    border: none;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .navbar button:hover {
-    background-color: #fff4f2;
+    background-color: #e55b50;
 }
 
 /* Active class for menu items */
 .navbar .active {
     padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
+    border-bottom: 2px solid #FF6F61;
 }
 
-.navbar li {
+/* Search icon and profile dropdown */
+.navbar-search-icon,
+.navbar-profile img {
+    width: 24px;
     cursor: pointer;
-}
-
-/* Search icon positioning */
-.navbar-search-icon {
-    position: relative;
-}
-
-.navbar-search-icon .dot {
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: tomato;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
-}
-
-/* Navbar profile dropdown */
-.navbar-profile {
-    position: relative; /* Ensure dropdown is positioned relative to the profile */
 }
 
 .nav-profile-dropdown {
     position: absolute;
     display: none;
     right: 0;
-    top: 100%; /* Position below the profile icon */
-    z-index: 10; /* Make sure it's above other elements */
+    top: 100%;
+    z-index: 10;
+    background-color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .navbar-profile:hover .nav-profile-dropdown {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #fff2ef;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border: 1px solid tomato;
-    outline: 2px solid white;
-    list-style: none;
 }
 
 .nav-profile-dropdown li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     cursor: pointer;
-}
-
-.nav-profile-dropdown img {
-    width: 20px;
 }
 
 .nav-profile-dropdown li:hover {
-    color: tomato;
+    color: #FF6F61;
 }
 
-/* Styling for menu and navbar-right */
+/* Navbar menu hover effect */
 .navbar-menu li:hover {
-    color: tomato;
+    color: #FF6F61;
 }
-
-.navbar-right img {
-    width: 25px;
+/* Ensure navbar-profile is positioned relative */
+.navbar-profile {
+    position: relative;
     cursor: pointer;
 }
 
+/* Dropdown container */
+.nav-profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 12px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 180px;
+}
 
+/* Dropdown items */
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    list-style: none; /* Remove bullet points */
+    gap: 12px;
+}
 
+/* Hover effect */
+.nav-profile-dropdown li:hover {
+    background-color: #f9f9f9;
+    color: #FF6F61;
+}
 
+/* Icon styling */
+.nav-profile-dropdown li svg, 
+.nav-profile-dropdown li img {
+    width: 24px;
+    height: 24px;
+    color: #FF6F61;
+}
 
+/* First and last items round corners */
+.nav-profile-dropdown li:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.nav-profile-dropdown li:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* Add subtle divider between items */
+.nav-profile-dropdown li:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+}
